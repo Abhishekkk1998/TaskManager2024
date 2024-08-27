@@ -1,0 +1,41 @@
+﻿@model IEnumerable<TaskManager2024.Models.Task>
+
+@{
+    ViewBag.Title = "Task List";
+}
+
+<h2>Task List</h2>
+
+<a href="@Url.Action("Create")" class="btn btn-primary">Add New Task</a>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody id="taskTable">
+        @foreach (var task in Model)
+        {
+            <tr class="@((task.IsCompleted ? "completed" : "pending"))">
+                <td>@task.Title</td>
+                <td>@task.Description</td>
+                <td>@(task.IsCompleted ? "Completed" : "Pending")</td>
+                <td>
+                    <a href="@Url.Action("Edit", new { id = task.TaskId })" class="btn btn-warning">Edit</a>
+                    <a href="@Url.Action("Details", new { id = task.TaskId })" class="btn btn-info">Details</a>
+                    <a href="@Url.Action("Delete", new { id = task.TaskId })" class="btn btn-danger">Delete</a>
+                    @if (!task.IsCompleted)
+                    {
+                        <a href="@Url.Action("MarkCompleted", new { id = task.TaskId })" class="btn btn-success">Mark as Completed</a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@section Scripts {
+    <script src="~/Scripts/taskManager.js"></script>
+}

@@ -1,0 +1,113 @@
+﻿/* Set padding to keep content from hitting the edges */
+.body-content {
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.completed {
+    background-color: #d4edda;
+}
+
+.pending {
+    background-color: #f8d7da;
+}
+
+.table tr {
+    cursor: move;
+}
+/* Custom form styles */
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-header {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.form-label {
+    font-weight: 500;
+}
+
+.form-control {
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    font-weight: bold;
+}
+/* Custom styles for Details page */
+.card {
+    border-radius: 10px;
+}
+
+.card-header {
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+}
+
+.dl-horizontal dt {
+    font-weight: 500;
+}
+
+.dl-horizontal dd {
+    margin-bottom: 1rem;
+}
+
+.btn-warning {
+    font-weight: bold;
+}
+
+.btn-secondary {
+    font-weight: bold;
+    background-color: #6c757d;
+}
+/* Custom styles for Delete page */
+.card {
+    border-radius: 10px;
+}
+
+.card-header {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.dl-horizontal dt {
+    font-weight: 500;
+}
+
+.dl-horizontal dd {
+    margin-bottom: 1rem;
+}
+
+.btn-danger {
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.btn-secondary {
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #6c757d;
+}
+
+

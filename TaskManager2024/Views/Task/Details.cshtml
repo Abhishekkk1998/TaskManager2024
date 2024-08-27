@@ -1,0 +1,54 @@
+﻿@model TaskManager2024.Models.Task
+
+@{
+    ViewBag.Title = "Task Details";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-info text-white">
+                    <h3 class="card-title text-center mb-0">Task Details</h3>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-4">
+                            @Html.DisplayNameFor(model => model.Title)
+                        </dt>
+                        <dd class="col-sm-8">
+                            @Html.DisplayFor(model => model.Title)
+                        </dd>
+
+                        <dt class="col-sm-4">
+                            @Html.DisplayNameFor(model => model.Description)
+                        </dt>
+                        <dd class="col-sm-8">
+                            @Html.DisplayFor(model => model.Description)
+                        </dd>
+
+                        <dt class="col-sm-4">
+                            @Html.DisplayNameFor(model => model.IsCompleted)
+                        </dt>
+                        <dd class="col-sm-8">
+                            @Html.DisplayFor(model => model.IsCompleted)
+                        </dd>
+
+                        <dt class="col-sm-4">
+                            @Html.DisplayNameFor(model => model.Priority)
+                        </dt>
+                        <dd class="col-sm-8">
+                            @Html.DisplayFor(model => model.Priority)
+                        </dd>
+                    </dl>
+                </div>
+                <div class="card-footer text-center">
+                    <div class="d-flex justify-content-between">
+                        @Html.ActionLink("Edit", "Edit", new { id = Model.TaskId }, new { @class = "btn btn-warning" })
+                        @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-secondary" })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
